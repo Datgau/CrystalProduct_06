@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;400i&display=swap">
+
+    <title>Healing Stone</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <nav class="title">
+                                <a class="navbar-brand" href="./index.html">
+                                    <img src="./img/logo01.png" alt="logo">
+                                </a>
+                            </nav>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">HOME</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./aboutus.html">ABOUT US</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./specialoffers.html">SPECIAL OFFERS</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./newarrival.html">NEW ARRIVAL</a>
+                            </li>
+                            <li class="nav-item dropdown"> <!-- Thêm class "dropdown" để tạo dropdown menu -->
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    PRODUCTS
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Dropdown menu -->
+                                    <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
+                                    <a class="dropdown-item" href="./healingstone.html">Healing Stones</a> 
+                                    <a class="dropdown-item" href="./amethyst.html">Amethyst</a>           
+                                    <a class="dropdown-item" href="./geode.html">Geode</a>                  
+                                    <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>   
+                                  <div>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">CONTACT US</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fas fa-search"></i>
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-user"></i>
+                                        <a class="nav-link" href="./bags.html">
+                                            <i class="fas fa-shopping-bag"></i>
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+        </header>
+        <div class="container">
+            <div id="wrapper" class="small-container">
+                <div class="headline">
+                    <div class="col-lg-4 input-group" id="sreach">
+                        <!----Search Filter----->
+                        <input class="form-control" onkeyup="filter()" type="text"
+                            placeholder=" What are you looking for ?" id="searchInput">
+                    </div>
+                    <h5 class="col-lg-8">Healing Stone</h5>
+                </div>
+
+                <ul class="products" id="product-list">
+                    <li class="col-12" id="product1">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh5.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product1')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Rainbow Moonstone Tumbled</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product1')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product1-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product1-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product1')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product2">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh6.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product2')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Citrine Chips</a>
+                                <div class="product-price">$16.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product2')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product2-details" style="display: none;">
+                                500gm Pack: Approx 50-60pcs 
+                                <a class="linkdl" href="./downloads/product2-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product2')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product3">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh7.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product3')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Rose Quartz Chips 250gm</a>
+                                <div class="product-price">$8.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product3')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product3-details" style="display: none;">
+                                250gm Pack: Approx 30-40pcs 
+                                <a class="linkdl" href="./downloads/product3-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product3')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    
+                    <li class="col-12" id="product4">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh8.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product4')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Mixed Tumbled</a>
+                                <div class="product-price">$30.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product4')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product4-details" style="display: none;">
+                                200gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product4-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product4')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product5">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh18.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product5')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Amethyst Tumbled Stones - ATS1</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product5')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product5-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product5-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product5')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product6">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh15.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product6')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Chevron Amethyst Freeform Tumbled Small</a>
+                                <div class="product-price">$0.99</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product6')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product6-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product6-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product6')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product7">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh16.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product7')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Rose Quartz Freeform Tumbled Small</a>
+                                <div class="product-price">$2.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product7')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product7-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product7-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product7')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product8">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh17.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product8')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Grade Rose Quartz Tumbled Stones</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product8')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product8-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product8-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product8')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product9">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="" class="product-thumb">
+                                    <img src="./img/dachualanh18.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product9')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Purple Agate Tumbled Stones</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product9')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product9-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product9-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product9')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product10">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal10">
+                                    <img src="./img/dachualanh14.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product10')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Brecciated Jasper Tumbled</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product10')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product10-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product10-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product10')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product11">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal11">
+                                    <img src="./img/dachualanh13.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product11')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Calcite Yellow Tumbled Stones</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product11')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product11-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product11-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product11')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product12">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal12">
+                                    <img src="./img/dachualanh1.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product12')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Amethyst Tumbled Stones</a>
+                                <div class="product-price">$3.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product12')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product12-details" style="display: none;">
+                                250gm Pack: Approx 15-20pcs 
+                                <a class="linkdl" href="./downloads/product12-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product12')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product13">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal13">
+                                    <img src="./img/dachualanh3.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product13')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">White Sage Smudge Stick</a>
+                                <div class="product-price">$15.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product13')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product13-details" style="display: none;">
+                                Size: 12cm x 4cm approx
+                                <a class="linkdl" href="./downloads/product13-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product13')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product14">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal14">
+                                    <img src="./img/dachualanh2.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product14')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Cleansing Rituals Pack</a>
+                                <div class="product-price">$20.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product14')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product14-details" style="display: none;">
+                                Size: 12cm x 4cm approx
+                                <a class="linkdl" href="./downloads/product14-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product14')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product15">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal15">
+                                    <img src="./img/dachualanh4.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product15')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Black Tourmaline Chips 250gm</a>
+                                <div class="product-price">$7.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product15')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product15-details" style="display: none;">
+                                350gm Pack: Approx 30-40pcs 
+                                <a class="linkdl" href="./downloads/product15-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product15')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="col-12" id="product16">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb" data-toggle="modal" data-target="#productModal16">
+                                    <img src="./img/dachualanh20.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product16')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="" class="product-cat">Healing Stone</a>
+                                <a href="" class="product-name">Black Tourmaline Rough</a>
+                                <div class="product-price">$8.00</div>
+                                <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product16')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product16-details" style="display: none;">
+                                Size: 8cm x 4cm approx
+                                <a class="linkdl" href="./downloads/product16-details.docx" download>Download Product Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product16')">X</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                </ul>
+                <div class="page-btn">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>&#10137;</span>
+                </div>
+            </div>
+
+            <!--introduction-->
+            <div class="container thongtinthem">
+                <div class="introduction col-lg-12">
+                    <p class="col-lg-12">Looking for healing crystals to restore your mind, body, and soul? At <strong>
+                            Esprit
+                            Healing</strong>, we offer an extensive
+                        collection of exquisite, potent healing stones that can bring clarity, strength, and serenity
+                        into
+                        your
+                        life. With 10 years of experience, we've been dedicated to providing ethically sourced crystals
+                        for
+                        sale in Ho Chi Minh City, delivering them anywhere in VietNam when you need them most.
+
+                        No matter the current circumstances in your life, tapping into the innate power of healing
+                        stones,
+                        gifts
+                        from Mother Nature herself, can have profound emotional, physical, and spiritual benefits for
+                        anyone. As
+                        highly regarded crystal suppliers, we offer a wide range of stones, minerals, fossils, sage, and
+                        more that
+                        can be used to cleanse and energize your home or worn as jewelry for continuous protection and
+                        enlightenment.
+
+                        Whether you seek improved health, prosperity, emotional healing, or hope in times of loss,
+                        <strong> Esprit
+                            Healing</strong>
+                        has the perfect crystals to help you restore what's been missing in your life. Whether a
+                        specific
+                        stone in
+                        our crystal shop catches your eye or you feel drawn to one intuitively, your subconscious knows
+                        precisely
+                        which crystal you need at this moment.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>HOTLINE: 033-909-8338</h5>
+                    <p>Email: esprithealing@gmail.com </p>
+                    <p>Always open</p>
+                    <p>The Crystal Esprit Healing store specializes in providing products made from natural gemstones
+                        that bring high feng shui and aesthetic value, along with positive energy every day.</p>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h5>Esprit Healing</h5>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#">About US</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Blog Esprit Healing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Policy</h5>
+                            <ul class="navbar-nav">
+                                
+                                <li class="nav-item"><a class="nav-link" href="#">Payment Methods</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Delivery Policy</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Warranty & Return Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Information</h5>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#">Terms of Use</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h5>Products</h5>
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#">Sale</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">New Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Bestselling Products</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Feng Shui Stones</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; Copyright 2023 EspritHealing.Com.All rights reserved.</p>
+        
+    </footer>
+
+</body>
+<script src="main.js"></script>
+
+</html>
