@@ -20,17 +20,22 @@
 }
 
 /* CSS Menu */
+header{
+    background-color:#fff;
+}
 .navbar-brand {
     display: flex;
+    
 }
 
 .navbar-nav {
     display: flex;
     flex-direction: column;
+    
 }
 
 .navbar-nav .nav-item {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .navbar ul {
@@ -38,18 +43,19 @@
 }
 
 .navbar ul li {
-    width: 12.5%;
+    width: 14%;
     justify-content: center;
     align-items: center;
 }
 
 .navbar ul li a {
-    font-weight: 600;
-    color: #623085;
+    font-weight: 400;
+    color:#a854e4;
+    font-size: 17px;
 }
 
 .navbar ul li a:hover {
-    color: #7DD3F7;
+    color:  rgb(253, 182, 82);
 
 }
 

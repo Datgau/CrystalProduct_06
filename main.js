@@ -29,7 +29,6 @@ function addToCart(productId) {
 
     btnArray.forEach(function (button, index) {
         button.addEventListener("click", function (event) {
-            event.preventDefault();
             var btnItem = event.target;
             var product = btnItem.parentElement.parentElement;
             var productImg = product.querySelector("img").src;
@@ -39,11 +38,11 @@ function addToCart(productId) {
             var item = {
                 id: productId,
                 name: productName,
-                price: productPrice
+                price: productPrice,
+                url : productImg
             };
-            cartItems.push(item); // Thêm sản phẩm vào mảng giỏ hàng
-
-            // Cập nhật danh sách giỏ hàng trong HTML
+            console.log(item)
+            cartItems.push(item); 
             var cartList = document.getElementById('cart-items');
             var listItem = document.createElement('li');
             listItem.textContent = productName + ' - ' + productPrice;
@@ -55,13 +54,13 @@ function addToCart(productId) {
     });
 }
 
-// Lắng nghe sự kiện click trên thẻ <a> có class "addToCartLink"
+
 var addToCartLinks = document.querySelectorAll('.addToCartLink');
 for (var i = 0; i < addToCartLinks.length; i++) {
     addToCartLinks[i].addEventListener('click', function (event) {
         event.preventDefault(); // Ngăn chặn hành động mặc định của nút
         var productId = event.target.getAttribute('data-product-id'); // Lấy ID sản phẩm từ thuộc tính data
-        addToCart(productId); // Gọi hàm để thêm sản phẩm vào giỏ hàng
+        addToCart(productId);
     });
 }
 
