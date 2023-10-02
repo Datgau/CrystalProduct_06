@@ -158,7 +158,6 @@ header{
  
 }
 
-/* CSS cho từng ảnh */
 .additional-images{
     margin-top:50px ;
 }
@@ -225,6 +224,22 @@ header{
     vertical-align:auto;
     user-select:auto;
 
+}
+.article-content{
+    text-align: center;
+    margin-top: 50px;
+}
+.article-content h5{
+    color:#a854e4;
+    font-weight: 400;
+    text-align: center;
+    font-size: 25px;
+}
+.article-content p{
+    text-align: center;
+    font-style: oblique;
+    font-weight: 400;
+    color:#a854e4;
 }
 /* CSS cho 4 ảnh */
 .additional-images .image-item {
