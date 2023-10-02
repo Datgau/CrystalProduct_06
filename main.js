@@ -84,6 +84,11 @@ function closeProductDetails(productId) {
     }
 }
 
+function toggleText(imageBox) {
+    var text = imageBox.querySelector(".hidden-text");
+    text.classList.toggle("hidden");
+}
+
 
 
 
