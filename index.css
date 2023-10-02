@@ -55,12 +55,10 @@ header{
     color:  rgb(253, 182, 82);
 
 }
-
 .nav-item {
     display: flex;
     width: 100%;
 }
-
 #sreach {
     text-align: center;
     width: 50%;
@@ -74,10 +72,6 @@ header{
     height: 100%;
 
 }
-
-
-
-/*CSS content*/
 .content {
     text-align: justify;
     color: #7F8083;
