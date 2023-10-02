@@ -291,7 +291,6 @@ header{
 .seemore a:hover {
     color: #f5951f;
     transform: scale(1.2);
-    transition: transform 0.3s ease;
 }
 
 
