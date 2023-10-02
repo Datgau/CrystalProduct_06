@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap');
 *{font-family: 'Open Sans', sans-serif;
 }
-
 .title {
     display: flex;
 
@@ -109,7 +108,7 @@ p.copyright {
     height:auto;
 }
 
-.about h5{
+.header h5{
     text-align: center;
    color:#a854e4;
     font-size: 25px;
@@ -118,7 +117,32 @@ p.copyright {
 
 
 /* CSS carousel */
-.carousel-inner-01{
+.carousel-inner {
+    text-align: center; /* Căn giữa nội dung của carousel */
+}
+
+.carousel-item img {
+    max-height: 480px; /* Độ cao tối đa cho hình ảnh trong carousel */
+}
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #141414; /* Màu của biểu tượng nút điều khiển trước và sau */
+    border-radius: 50%; /* Bo tròn biểu tượng nút điều khiển */
+    padding: 15px; /* Khoảng cách giữa biểu tượng và nút điều khiển */
+}
+
+.carousel-control-prev {
+    left: -25px; /* Điều chỉnh vị trí của nút điều khiển trước */
+}
+
+.carousel-control-next {
+    right: -30px; /* Điều chỉnh vị trí của nút điều khiển sau */
+}
+
+.carousel-indicators {
+    bottom: 20; /* Vị trí của chỉ số (bullets) */
+}.carousel-inner-01{
     text-align: center;
 }
 .carousel-item img {
