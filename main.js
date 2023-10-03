@@ -50,7 +50,7 @@ function addToCart(productId, productName) {
 var productPrice = Item.querySelector('.product-price').textContent;
     
    cart.push({ id: productId, name: productName, price: productPrice  });
-   alert("Product has been added to the shopping cart successfully!!!\nName: "+productName+" \nPrice: "+productPrice+"");
+   alert("Product has been added to the shopping cart successfully !!!\nName: "+productName+" \nPrice: "+productPrice+"");
 }
 
 

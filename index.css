@@ -173,6 +173,9 @@ header{
     text-align: center;
     
 }
+.product-info del{
+    color: red;
+}
 .additional-images h5{
     text-align: center;
     padding: 10px 20px;
