@@ -48,7 +48,6 @@ function addToCart(productId, productName) {
     var productThumb = Item.querySelector('.product-thumb');
     var productName = Item.querySelector('.product-name').textContent;
 var productPrice = Item.querySelector('.product-price').textContent;
-var productImg = Item.querySelector("./img")
     
    cart.push({ id: productId, name: productName, price: productPrice  });
    alert("Product has been added to the shopping cart successfully!!!\nName: "+productName+" \nPrice: "+productPrice+"");
