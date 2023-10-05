@@ -304,6 +304,8 @@ ul.products {
     grid-gap: 15px;
     list-style: none;
     padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+
 }
 
 #wrapper {
