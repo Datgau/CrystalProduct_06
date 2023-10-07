@@ -58,16 +58,16 @@ ul li{
     list-style: none;
     margin-top: 30px;
     margin-left: 30px;
+    font-weight: 500;
+    font-size: 16px;
 } 
-.button{
-    margin-top: 30px;
-    margin-left: 30px;
-    padding: 10px 20px;
+.btn.btn-warning,
+.btn.btn-danger {
+    float: right; /* Đặt nút "Edit" và "Remove" sang phải */
+    margin-right: 3%; /* Lề phải là 5% */
 }
-.col-lg-5{
-    margin-top: 30px;
-    margin-left: 30px;
-    padding: 8px 10px;
+.pay{
+    text-align: center;
 }
       
 </style>
@@ -103,19 +103,16 @@ ul li{
                             <li class="nav-item">
                                 <a class="nav-link" href="./newarrival.html">NEW ARRIVAL</a>
                             </li>
-                            <li class="nav-item dropdown"> <!-- Thêm class "dropdown" để tạo dropdown menu -->
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    PRODUCTS
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Dropdown menu -->
-                                    <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
-                                    <a class="dropdown-item" href="./healingstone.html">Healing Stones</a> 
-                                    <a class="dropdown-item" href="./amethyst.html">Amethyst</a>           
-                                    <a class="dropdown-item" href="./geode.html">Geode</a>                  
-                                    <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>   
-                                  <div>
-                            </li>
+                            <li class="nav-item dropdown" id="products-dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown">PRODUCTS</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
+                                  <a class="dropdown-item" href="./healingstone.html">Healing Stones</a>
+                                  <a class="dropdown-item" href="./amethyst.html">Amethyst</a>
+                                  <a class="dropdown-item" href="./geode.html">Geode</a>
+                                  <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>
+                                </div>
+                              </li>
     
                             <li class="nav-item">
                                 <a class="nav-link" href="./contact.html">CONTACT US</a>
@@ -141,32 +138,50 @@ ul li{
             <h5 class="col-lg-8">Your Cart</h5>
         </div>
     <div class="form-control ">
-    <ul id="cart-list" class="product col-lg-8">
-        <script>
-            var cartData = JSON.parse(localStorage.getItem('cart'));
-            var cartList = document.getElementById('cart-list');
-    
-            if (cartData && cartData.length > 0) {
+        <ul id="cart-list" class="product col-lg-12">
+            <script>
+                var cartData = JSON.parse(localStorage.getItem('cart'));
+                var cartList = document.getElementById('cart-list');
                
-                cartData.forEach(function (item) {
+                if (cartData && cartData.length > 0) {
+                    cartData.forEach(function (item) {
+                        var li = document.createElement('li');
+                        var productName = item.name + ' - Price: ' + item.price;
+        
+                        var themButton = document.createElement('button');
+                        themButton.className = 'btn btn-warning col-lg-0.3';
+                        themButton.textContent = '+';
+
+                        var botButton = document.createElement('button');
+                        botButton.className = 'btn btn-warning col-lg-0.5';
+                        botButton.textContent = '-';
+        
+        
+                        var removeButton = document.createElement('button');
+                        removeButton.className = 'btn btn-danger col-lg-1';
+                        removeButton.textContent = 'Delete';
+                        removeButton.onclick = function () {
+                        };
+        
+                        li.textContent = productName;
+                        li.appendChild(removeButton);
+                        li.appendChild(botButton);
+                        li.appendChild(themButton);
+                        
+        
+                        cartList.appendChild(li);
+                    });
+                } else {
                     var li = document.createElement('li');
-                    li.textContent = item.name + '\n - Price: ' + item.price;
+                    li.textContent = 'Giỏ hàng của bạn trống.';
                     cartList.appendChild(li);
-                    
-                });
-            } else {
-                var li = document.createElement('li');
-                li.textContent = 'Giỏ hàng của bạn trống.';
-                cartList.appendChild(li);
-            }
-        </script>
-        <div class="button">
-            <li>
-        <button class="btn btn-success col-lg-5">Pay</button>
-        <button class="btn btn-warning col-lg-5">Edit</button>
-            </li>
-    </div>
-    </ul>
+                }
+            </script>
+        </ul>
+        <div class="pay">
+            <button class="btn btn-success col-lg-3">Pay</button>
+        </div>
+        
 </div>
 </div>
 </div>

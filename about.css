@@ -52,6 +52,31 @@ header{
     display: flex;
     width: 100%;
 }
+#products-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Tùy chỉnh vị trí hiển thị của dropdown menu */
+  #products-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  
+  #products-dropdown .dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    font-weight: 500;
+    color:#a854e4;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  #products-dropdown .dropdown-menu a:hover {
+    background-color: #f2b04d; 
+  }
 
 footer ul.list-inline li {
     display: inline;

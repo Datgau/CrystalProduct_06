@@ -45,20 +45,16 @@
                         <li class="nav-item">
                             <a class="nav-link" href="./newarrival.html">NEW ARRIVAL</a>
                         </li>
-                        <li class="nav-item dropdown"> <!-- Thêm class "dropdown" để tạo dropdown menu -->
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PRODUCTS
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Dropdown menu -->
-                                <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
-                                <a class="dropdown-item" href="#">Amethyst</a> <!--Tinh thể thô màu tím-->
-                                <a class="dropdown-item" href="./healingstone.html">Healing Stones</a>
-                                <!--Đá chữa lành-->
-                                <a class="dropdown-item" href="#">Geode</a> <!--Đá có tinh thể bên trong-->
-                                <a class="dropdown-item" href="#">Chakra Bracelet</a> <!--Vòng luân xa-->
+                        <li class="nav-item dropdown" id="products-dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdown">PRODUCTS</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
+                              <a class="dropdown-item" href="./healingstone.html">Healing Stones</a>
+                              <a class="dropdown-item" href="./amethyst.html">Amethyst</a>
+                              <a class="dropdown-item" href="./geode.html">Geode</a>
+                              <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>
                             </div>
-                        </li>
+                          </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="./contact.html">CONTACT US</a>
@@ -82,10 +78,12 @@
     <div class="container">
         <div id="wrapper" class="small-container">
             <div class="headline">
-                <div class="col-lg-4 input-group" id="sreach">
+                <div class="col-lg-6 input-group" id="sreach">
                     <!----Search Filter----->
-                    <input class="form-control" onkeyup="filter()" type="text" placeholder=" What are you looking for ?"
-                        id="searchInput">
+                    <input class="form-control" onkeyup="filter()" type="text"
+                        placeholder=" What are you looking for ?" id="searchInput">
+                        <p> or </p>
+                        <button class="btn btn-success" onclick="sortList()">Sort by Price</button>
                 </div>
                 <h5 class="col-lg-8">Special Offers</h5>
             </div>

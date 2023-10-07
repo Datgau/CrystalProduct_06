@@ -10,452 +10,536 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;400i&display=swap">
     <link rel="stylesheet" href="./index.css">
     <title>Chakra Barcelet</title>
-    
+
 </head>
 
-<body >
+<body>
     <div class="container">
 
-    <header>
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <header>
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <nav class="title">
-                            <a class="navbar-brand" href="./index.html">
-                                <img src="./img/logo01.png" alt="logo">
-                            </a>
-                        </nav>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">HOME</a>
-                        </li>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <nav class="title">
+                                <a class="navbar-brand" href="./index.html">
+                                    <img src="./img/logo01.png" alt="logo">
+                                </a>
+                            </nav>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./index.html">HOME</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./about.html">ABOUT US</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./about.html">ABOUT US</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./special_offers.html">SPECIAL OFFERS</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./special_offers.html">SPECIAL OFFERS</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./newarrival.html">NEW ARRIVAL</a>
-                        </li>
-                        <li class="nav-item dropdown"> <!-- Thêm class "dropdown" để tạo dropdown menu -->
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                PRODUCTS
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown"> <!-- Dropdown menu -->
-                                <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
-                                <a class="dropdown-item" href="./healingstone.html">Healing Stones</a> 
-                                <a class="dropdown-item" href="./amethyst.html">Amethyst</a>           
-                                <a class="dropdown-item" href="./geode.html">Geode</a>                  
-                                <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>   
-                              <div>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./newarrival.html">NEW ARRIVAL</a>
+                            </li>
+                            <li class="nav-item dropdown" id="products-dropdown">
+                                <a class="nav-link" href="#" id="navbarDropdown">PRODUCTS</a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                  <a class="dropdown-item" href="./topproduct.html">Best Seller</a>
+                                  <a class="dropdown-item" href="./healingstone.html">Healing Stones</a>
+                                  <a class="dropdown-item" href="./amethyst.html">Amethyst</a>
+                                  <a class="dropdown-item" href="./geode.html">Geode</a>
+                                  <a class="dropdown-item" href="./chakra.html">Chakra Bracelet</a>
+                                </div>
+                              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="./contact.html">CONTACT US</a>
-                        </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">CONTACT US</a>
+                            </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <i class="fas fa-search"></i>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">
-                                    <i class="fas fa-user"></i>
-                                    <a class="nav-link" href="./bags.html">
-                                        <i class="fas fa-shopping-bag"></i>
-                                    </a>
-                        </li>
-                    </ul>
+                                    <i class="fas fa-search"></i>
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-user"></i>
+                                        <a class="nav-link" href="./bags.html">
+                                            <i class="fas fa-shopping-bag"></i>
+                                        </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <hr>
+        </header>
+        <div class="container">
+            <div id="wrapper" class="small-container">
+                <div class="headline">
+                    <div class="col-lg-6 input-group" id="sreach">
+                        <!----Search Filter----->
+                        <input class="form-control" onkeyup="filter()" type="text"
+                            placeholder=" What are you looking for ?" id="searchInput">
+                            <p> or </p>
+                            <button class="btn btn-success" onclick="sortList()">Sort by Price</button>
+                    </div>
+                    <h5 class="col-lg-8">Chakra Bracelet</h5>
+                </div>
+
+                <ul class="products" id="product-list">
+                    <li class="col-12" id="product1">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay1.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product1')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Chakra Power Bead Bracelet</a>
+                                <div class="product-price">$84.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product1')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product1-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product1-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product1')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="col-12" id="product2">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay2.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product2')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Chakra Power Bead Bracelet</a>
+                                <div class="product-price">$90.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product2')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product2-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product2-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product2')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product3">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay3.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product3')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Unakite Bead Bracelet</a>
+                                <div class="product-price">$20.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product3')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product3-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product3-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product3')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <li class="col-12" id="product4">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay4.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product4')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Gold Sandstone Bead Bracelet</a>
+                                <div class="product-price">$30.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product4')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product4-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product4-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product4')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product5">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay5.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product5')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Sodalite Power Bead Bracelet</a>
+                                <div class="product-price">$40.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product5')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product5-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product5-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product5')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product6">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay6.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product6')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Amethyst Bead Bracelet</a>
+                                <div class="product-price">$25.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product6')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product6-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product6-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product6')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product7">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay7.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product7')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Carnelian Bead Bracelet</a>
+                                <div class="product-price">$25.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product7')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product7-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product7-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product7')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product8">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay8.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product8')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Natural Citrine Bead Bracelet</a>
+                                <div class="product-price">$48.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product8')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product8-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product8-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product8')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product9">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay9.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product9')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Rose Quartz Round Bead Bracelet</a>
+                                <div class="product-price">$48.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product9')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product9-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product9-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product9')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product10">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay10.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product10')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Black Obsidian Round Bead Bracelet</a>
+                                <div class="product-price">$35.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product10')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product10-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product10-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product10')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product11">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay11.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product11')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Lace Agate Round Bead Bracelet</a>
+                                <div class="product-price">$45.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product11')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product11-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product11-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product11')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product12">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay12.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product12')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Green Aventurine Power Bead Bracelet</a>
+                                <div class="product-price">$25.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product12')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product12-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product12-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product12')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product13">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay13.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product13')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Red Jasper Chip Bracelet</a>
+                                <div class="product-price">$6.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product13')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product13-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product13-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product13')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product14">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay14.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product14')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Chip Bracelets Bulk 90pc</a>
+                                <div class="product-price">$340.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product14')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product14-details" style="display: none;">
+                                50 bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product14-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product14')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product15">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay15.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product15')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Tourmalinated Quartz Bracelet - TQB11</a>
+                                <div class="product-price">$4.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product15')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product15-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product15-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product15')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="col-12" id="product16">
+                        <div class="product-item">
+                            <div class="product-top">
+                                <a href="#" class="product-thumb">
+                                    <img src="./img/vongtay16.jpg" alt="">
+                                </a>
+                                <a class="buy-now addToCartLink" href="javascript:void(0);"
+                                    onclick="addToCart('product16')">Add To Cart</a>
+                            </div>
+                            <div class="product-info">
+                                <a href="#" class="product-cat">Chakra Bracelet</a>
+                                <a href="#" class="product-name">Red Ceramic Chip Bracelet - RCC</a>
+                                <div class="product-price">$9.00</div>
+                                <a class="view-details" href="javascript:void(0);"
+                                    onclick="showProductDetails('product16')">View Details</a>
+                            </div>
+                            <div class="product-details" id="product16-details" style="display: none;">
+                                A bracelet with 8mm stone
+                                <a class="linkdl" href="./downloads/product16-details.docx" download>Download Product
+                                    Details (Word)</a>
+                                <a class="close-details" href="javascript:void(0);"
+                                    onclick="hideProductDetails('product16')">X</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+                <div class="page-btn">
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>&#10137;</span>
                 </div>
             </div>
-        </nav>
-        <hr>
-    </header>
-    <div class="container">
-        <div id="wrapper" class="small-container">
-            <div class="headline">
-                <div class="col-lg-4 input-group" id="sreach">
-                    <!----Search Filter----->
-                    <input class="form-control" onkeyup="filter()" type="text" placeholder=" What are you looking for ?" id="searchInput">
+            <div class="container thongtinthem">
+                <div class="introduction col-lg-12">
+                    <p class="col-lg-12">
+                        Amethyst is a precious gemstone known for its unique beauty and spiritual significance. It is a
+                        purple-colored gemstone, often displaying deep and enchanting shades of purple. Amethyst is
+                        commonly found in gemstone mines around the world and is widely used in jewelry and lapidary
+                        arts. <br>
+
+                        In addition to its stunning appearance, Amethyst is associated with many spiritual benefits. It
+                        is considered a protective and soothing stone for the soul. Amethyst is believed to improve
+                        one's mood, enhance concentration, and reduce stress. This has made Amethyst a popular gemstone
+                        in the worlds of yoga and meditation, where it is used to promote tranquility and inner peace.
+                        <br>
+
+                        However, beyond its spiritual properties, Amethyst also symbolizes purity and elegance. With its
+                        unique beauty and profound spiritual meaning, Amethyst continues to captivate the attention of
+                        gemstone enthusiasts and those seeking a unique gift with a meaningful message.<br>
+                    </p>
                 </div>
-                <h5 class="col-lg-8">Chakra Bracelet</h5>
-            </div>
-
-            <ul class="products" id="product-list">
-                <li class="col-12" id="product1">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay1.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product1')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Chakra Power Bead Bracelet</a>
-                            <div class="product-price">$84.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product1')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product1-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product1-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product1')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-
-                <li class="col-12" id="product2">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay2.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product2')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Chakra Power Bead Bracelet</a>
-                            <div class="product-price">$90.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product2')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product2-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product2-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product2')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product3">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay3.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product3')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Unakite Bead Bracelet</a>
-                            <div class="product-price">$20.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product3')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product3-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product3-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product3')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                
-
-                <li class="col-12" id="product4">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay4.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product4')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Gold Sandstone Bead Bracelet</a>
-                            <div class="product-price">$30.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product4')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product4-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product4-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product4')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product5">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay5.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product5')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Sodalite Power Bead Bracelet</a>
-                            <div class="product-price">$40.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product5')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product5-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product5-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product5')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product6">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay6.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product6')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Amethyst Bead Bracelet</a>
-                            <div class="product-price">$25.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product6')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product6-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product6-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product6')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product7">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay7.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product7')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Carnelian Bead Bracelet</a>
-                            <div class="product-price">$25.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product7')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product7-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product7-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product7')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product8">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay8.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product8')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Natural Citrine Bead Bracelet</a>
-                            <div class="product-price">$48.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product8')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product8-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product8-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product8')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product9">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay9.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product9')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Rose Quartz Round Bead Bracelet</a>
-                            <div class="product-price">$48.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product9')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product9-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product9-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product9')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product10">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay10.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product10')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Black Obsidian Round Bead Bracelet</a>
-                            <div class="product-price">$35.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product10')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product10-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product10-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product10')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product11">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay11.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product11')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Lace Agate Round Bead Bracelet</a>
-                            <div class="product-price">$45.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product11')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product11-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product11-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product11')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product12">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay12.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product12')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Green Aventurine Power Bead Bracelet</a>
-                            <div class="product-price">$25.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product12')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product12-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product12-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product12')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product13">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay13.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product13')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Red Jasper Chip Bracelet</a>
-                            <div class="product-price">$6.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product13')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product13-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product13-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product13')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product14">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay14.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product14')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Chip Bracelets Bulk 90pc</a>
-                            <div class="product-price">$340.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product14')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product14-details" style="display: none;">
-                            50 bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product14-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product14')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product15">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay15.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product15')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Tourmalinated Quartz Bracelet - TQB11</a>
-                            <div class="product-price">$4.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product15')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product15-details" style="display: none;">
-                            A bracelet with 8mm stone 
-                            <a class="linkdl" href="./downloads/product15-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product15')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-                <li class="col-12" id="product16">
-                    <div class="product-item">
-                        <div class="product-top">
-                            <a href="#" class="product-thumb">
-                                <img src="./img/vongtay16.jpg" alt="">
-                            </a>
-                            <a class="buy-now addToCartLink" href="javascript:void(0);" onclick="addToCart('product16')">Add To Cart</a>
-                        </div>
-                        <div class="product-info">
-                            <a href="#" class="product-cat">Chakra Bracelet</a>
-                            <a href="#" class="product-name">Red Ceramic Chip Bracelet - RCC</a>
-                            <div class="product-price">$9.00</div>
-                            <a class="view-details" href="javascript:void(0);" onclick="showProductDetails('product16')">View Details</a>
-                        </div>
-                        <div class="product-details" id="product16-details" style="display: none;">
-                            A bracelet with 8mm stone
-                            <a class="linkdl" href="./downloads/product16-details.docx" download>Download Product Details (Word)</a>
-                            <a class="close-details" href="javascript:void(0);" onclick="hideProductDetails('product16')">X</a>
-                        </div>
-                    </div>
-                </li>
-                
-            </ul>
-            <div class="page-btn">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>&#10137;</span>
             </div>
         </div>
     </div>
-   </div>
 
 
 
@@ -478,13 +562,14 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a class="nav-link" href="./about.html">About US</a></li>
                                 <li class="nav-item"><a class="nav-link" href="./Contact.html">Contact</a></li>
-                                <li class="nav-item"><a class="nav-link" href="./share.html">Blog Esprit Healing</a></li>
+                                <li class="nav-item"><a class="nav-link" href="./share.html">Blog Esprit Healing</a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-3">
                             <h5>Policy</h5>
                             <ul class="navbar-nav">
-                                
+
                                 <li class="nav-item"><a class="nav-link" href="#">Payment Methods</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Delivery Policy</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#">Warranty & Return Policy</a></li>
@@ -502,8 +587,9 @@
                             <ul class="navbar-nav">
                                 <li class="nav-item"><a class="nav-link" href="./special_offers.html">Sale</a></li>
                                 <li class="nav-item"><a class="nav-link" href="./newarrival.html">New Products</a></li>
-                                <li class="nav-item"><a class="nav-link" href="./topproduct.html">Bestselling Products</a></li>
-                            
+                                <li class="nav-item"><a class="nav-link" href="./topproduct.html">Bestselling
+                                        Products</a></li>
+
                             </ul>
                         </div>
                     </div>
