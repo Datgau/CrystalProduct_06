@@ -81,11 +81,12 @@ if (localStorage.getItem("cart")) {
   
   function addToCart(productId, productName) {
       var Item = document.getElementById(productId);
-      var productThumb = Item.querySelector('.product-thumb');
+      var productThumb = Item.querySelector('.product-thumb img').getAttribute('src');
+      console.log(productThumb)
       var productName = Item.querySelector('.product-name').textContent;
       var productPrice = Item.querySelector('.product-price').textContent;
   
-      cart.push({ id: productId, name: productName, price: productPrice });
+      cart.push({ id: productId, name: productName, price: productPrice , img: productThumb});
       luuDulieuGioHangVaoLocalStorage();
   
       alert("Product has been added to the shopping cart successfully !!!\nName: " + productName + " \nPrice: " + productPrice + "");
