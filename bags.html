@@ -68,7 +68,7 @@
     #cart-list li {
         list-style: none;
         margin-top: 30px;
-        margin-left: 80px;
+        margin-left: 140px;
         font-weight: 500;
         font-size: 16px;
         vertical-align: middle;
@@ -76,7 +76,7 @@
 
 
     li img {
-        max-width: 250px;
+        max-width: 300px;
         height: auto;
         vertical-align: text-bottom;
         display: flex;
@@ -94,11 +94,14 @@
     .btn.btn-warning,
     .btn.btn-danger {
         float: right;
-        margin-right: 10px;
+        margin-right: 30px;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-top: 10px;
+    }
+    .btn.btn-danger{
+        margin-right: 100px;
     }
 
     .btn.btn-warning {
@@ -336,7 +339,7 @@
         
                                 var shipInfo = document.createElement('p');
                                 shipInfo.className = 'ship col-lg-12';
-                                shipInfo.innerHTML = 'Reduce the shipping fee by $5.00 for orders totaling at least $50.00.<br>Reduce the shipping fee by $10.00 for orders totaling at least $100.00.<br>Offer free shipping for orders within Vietnam.';
+                                shipInfo.innerHTML = 'Reduce the shipping fee by $5.00 for orders totaling at least $50.00.<br>Reduce the shipping fee by $10.00 for orders totaling at least $99.00.<br>Offer free shipping for orders within Vietnam.';
                                 li.appendChild(shipInfo);
         
                                 cartList.appendChild(li);

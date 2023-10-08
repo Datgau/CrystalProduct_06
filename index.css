@@ -338,6 +338,10 @@ ul.products {
 
 }
 
+ul.products li{
+    height:490px;
+}
+
 #wrapper {
     max-width: 1170px;
     margin: 0 auto;
