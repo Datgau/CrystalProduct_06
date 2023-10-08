@@ -10,8 +10,201 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;400i&display=swap">
-    <link rel="stylesheet" href="./about.css">
+    
 </head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap');
+*{font-family: 'Open Sans', sans-serif;
+}
+.title {
+    display: flex;
+
+}
+
+.title img:hover {
+    transform: scale(1.2);
+}
+header{
+    background-color:#fff;
+}
+.navbar-brand {
+    display: flex;
+    
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.navbar-nav .nav-item {
+    margin-bottom: 5px;
+}
+
+.navbar ul {
+    width: 100%;
+}
+
+.navbar ul li {
+    width: 14%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar ul li a {
+    font-weight: 400;
+    color:#a854e4;
+    font-size: 17px;
+}
+
+.navbar ul li a:hover {
+    color:  rgb(253, 182, 82);
+
+}
+
+.nav-item {
+    display: flex;
+    width: 100%;
+}
+#products-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Tùy chỉnh vị trí hiển thị của dropdown menu */
+  #products-dropdown .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+  }
+  
+  #products-dropdown .dropdown-menu a {
+    display: block;
+    padding: 8px 12px;
+    font-weight: 500;
+    color:#a854e4;
+    font-size: 17px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+  }
+  
+  #products-dropdown .dropdown-menu a:hover {
+    background-color: #f2b04d; 
+  }
+
+footer ul.list-inline li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer {
+    background-color: #5a5858;
+    color: #fff;
+    margin-top: 50px;
+}
+footer .row .col-md-6{
+    margin-top: 50px;
+}
+
+footer h5 {
+    font-size: 20px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer ul.navbar-nav li {
+    list-style: none;
+}
+
+footer ul.navbar-nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.col-md-3 a:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.col-md-3 h5:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển đổi mượt mà */
+}
+p.copyright {
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+.about {
+    margin-top: 30px;
+    width: 100% ;
+    height:auto;
+}
+
+.header h5{
+    text-align: center;
+   color:#a854e4;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+
+/* CSS carousel */
+.carousel-inner {
+    text-align: center; /* Căn giữa nội dung của carousel */
+}
+
+.carousel-item img {
+    max-height: 480px; /* Độ cao tối đa cho hình ảnh trong carousel */
+}
+
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #141414; /* Màu của biểu tượng nút điều khiển trước và sau */
+    border-radius: 50%; /* Bo tròn biểu tượng nút điều khiển */
+    padding: 15px; /* Khoảng cách giữa biểu tượng và nút điều khiển */
+}
+
+.carousel-control-prev {
+    left: -25px; /* Điều chỉnh vị trí của nút điều khiển trước */
+}
+
+.carousel-control-next {
+    right: -30px; /* Điều chỉnh vị trí của nút điều khiển sau */
+}
+
+.carousel-indicators {
+    bottom: 20; /* Vị trí của chỉ số (bullets) */
+}.carousel-inner-01{
+    text-align: center;
+}
+.carousel-item img {
+    max-height: 480px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #141414;
+    border-radius: 50%;
+    padding: 15px;
+}
+.carousel-control-prev {
+    left: -25px; 
+}
+.carousel-control-next {
+    right: -30px; 
+}
+.carousel-indicators {
+    bottom: 20; 
+}
+
+
+</style>
 
 <body>
     <header class="container">
@@ -65,7 +258,7 @@
                     <i class="fas fa-search"></i>
                     <a class="nav-link" href="#">
                       <i class="fas fa-user"></i>
-                      <a class="nav-link" href="#">
+                      <a class="nav-link" href="./bags.html">
                         <i class="fas fa-shopping-bag"></i>
                       </a>
                 </li>
