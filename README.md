@@ -4,7 +4,6 @@
 + Batch No		:T5.2306.E1	
 + Group No:		: 06
 <ul>List Of Member:
-<li>Phan Văn Duy 	(Student1470114)</li>
 <li>Nguyễn Tiến Đạt	(Student1477469)</li>
 <li>Phạm Tuyên	(Student1477478)</li>
 </ul> 
